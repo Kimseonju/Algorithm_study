@@ -17,16 +17,29 @@ void func(int x)
 		cnt++;
 		return;
 	}
-	for (int i = 1; i < n; ++i)
+	for (int i = 0; i < n; ++i)
 	{
-		if(checkblock2[i] || checkblock[i)
+		if (checkblock2[i] || checkblock3[i + x] || checkblock4[x - i + n - 1])
+		{
+			continue;
+		}
+		checkblock2[i] = true;
+		checkblock3[i + x] = true;
+		checkblock4[x - i + n - 1] = true;
+		func(x + 1);
+		checkblock2[i] = false;
+		checkblock3[i + x] = false;
+		checkblock4[x - i + n - 1] = false;
 	}
 }
 int main()
 {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
 	cnt = 0;
 	cin >> n;
 	func(0);
+	cout << cnt;
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
