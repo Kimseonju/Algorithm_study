@@ -75,10 +75,9 @@ int main()
 				
 			}
 		}
-	}//높이 세로 가로
+	}
 	cout << day;
 	return 0;
-
 }
 
 
