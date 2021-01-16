@@ -17,9 +17,9 @@ void func(int x)
 		cnt++;
 		return;
 	}
-	for (int i = 0; i < n; ++i)
+	for (int i = 0; i < n; ++i) //(x,i)
 	{
-		if (checkblock2[i] || checkblock3[i + x] || checkblock4[x - i + n - 1])
+		if (checkblock2[i] || checkblock3[i + x] || checkblock4[x - i + (n - 1)])
 		{
 			continue;
 		}
