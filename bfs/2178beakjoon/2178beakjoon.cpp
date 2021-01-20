@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <string>
-#include <cstring>
 #include <vector>
 #include <queue>
 using namespace std;
@@ -13,6 +12,7 @@ queue<pair<int, int>>q;
 int dx[4] = { 1,0,-1,0 };
 //오 아 왼 위
 int dy[4] = { 0,1,0,-1 };
+int check[101][101];
 int main()
 {
 	cin >> y >> x;
@@ -24,6 +24,7 @@ int main()
 		vec.push_back(str);
 	}
 	q.push({ 0,0 });
+	check[0][0] = 0;
 	while (!q.empty())
 	{
 		int ty =q.front().first;
@@ -33,21 +34,18 @@ int main()
 		{
 			int cy = ty + dy[i];
 			int cx = tx + dx[i];
+			
 			if (cy<0 || cy>=y || cx<0 || cx>=x)
 				continue;
-			if (vec[cy][cx] == '0')
-				continue;
-			if (cy == 0 && cx == 0)
-				continue;
-			if (vec[cy][cx] > vec[ty][tx]+1 || vec[cy][cx]=='1')
+			if (vec[cy][cx]=='1'&& check[cy][cx] == 0)
 			{ 
-				vec[cy][cx] = vec[ty][tx]+1;
+				check[cy][cx] = check[ty][tx] + 1;
 				q.push({ cy,cx });
 			}
 		}
 
 	}
-	cout << vec[y - 1][x - 1] - 48;
+	cout << check[y - 1][x - 1]+1;
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
