@@ -9,16 +9,15 @@ int rob_y;
 int rob_x;
 int rob_dir;
 
-int dx[4] = { 0,1,0,-1 };
-int dy[4] = { -1,0,1,0 };
-int map[51][51];
+int backx[4] = { 0,1,0,-1 };
+int backy[4] = { -1,0,1,0 };
+int map[51][51] = { 1 };
 bool visit[51][51] = { false };
 int ans = 0;
 
-int backx[4] = { 0, -1, 0, 1 };
-int backy[4] = { 1, 0, -1, 0 };
+int dx[4] = { 0, -1, 0, 1 };
+int dy[4] = { 1, 0, -1, 0 };
 void dfs(int vrob_y, int vrob_x, int vdir) {
-	int k;
 
 	if (map[vrob_y][vrob_x] == 0)
 	{
@@ -28,19 +27,17 @@ void dfs(int vrob_y, int vrob_x, int vdir) {
 
 	for (int i = 0; i < 4; ++i)
 	{
-		int dir = vdir - 1 + i;
-		if (dir > 3)
-			dir = dir % 4;
-		else if (dir < 0)
-			dir = 4 + dir;
+		vdir = vdir - 1;
+		if (vdir < 0)
+			vdir = 3;
 
-		int cy = vrob_y + dy[dir];
-		int cx = vrob_x + dx[dir];
+		int cy = vrob_y + dy[vdir];
+		int cx = vrob_x + dx[vdir];
 		if (cy < 0 || cy >= y || cx < 0 || cx >= x)
 			continue;
 		if (map[cy][cx] == 0)
 		{
-			dfs(cy, cx, dir);
+			dfs(cy, cx, vdir);
 			return;
 		}
 
