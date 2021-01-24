@@ -1,22 +1,23 @@
 ﻿// 1647beakjoon.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
 //
 
-#include <iostream>
-using namespace std;
-
-#include <algorithm>
-#include <vector>
 //마을을 두개로 분리
 //
 //분리된 마을안에 있는 두집 사이에 경로가 존재
 //
 //두 마을 사이에 있는 길은 삭제
 //
-//각 분리된 집 안에서 두집 경로 항상존재 1개
+//각 분리된 집 안에서 두집 경로 항상존재
 //
-//최소
+//즉 마을을 전부 연결시키되 한길만 삭제하면 두개의 마을로 변함
 //
 //결론 -모든 길을 하나만 연결 후 마지막 길(제일 높은 값) 삭제
+
+#include <iostream>
+using namespace std;
+
+#include <algorithm>
+#include <vector>
 int N, M;
 class Edge {
 public:
@@ -70,7 +71,7 @@ int main()
 		cin >> a >> b >> c;
 		v.push_back(Edge(a, b, c));
 	}
-	int MaxM = N - 1; //이어져있는 길의 갯수값
+	int MaxM = N - 1; //이어져있는 최대 길의 갯수
 	int cnt = 0;
 	sort(v.begin(), v.end());
 	int sum = 0;
@@ -83,8 +84,9 @@ int main()
 		if (!findparent(v[i].node[0] - 1, v[i].node[1] - 1))
 		{
 			cnt++;
+			unionparent(v[i].node[0] - 1, v[i].node[1] - 1);
 			if (MaxM == cnt)
-			{ //마지막선 더하지 않는다.
+			{ //마지막선 더하지 않는다. 최대값선
 				break;
 			}
 			sum += v[i].direction;
