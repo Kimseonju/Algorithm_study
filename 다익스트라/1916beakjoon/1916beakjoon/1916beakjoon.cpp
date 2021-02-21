@@ -64,7 +64,7 @@ int main()
 	cin >> endN;
 	Dijkstra(startN);
 	
-	cout << number[endN - 1]+"\n";
+	cout << number[endN - 1]<<"\n";
 	cout << path[endN - 1].size() << '\n';
 	for (auto it : path[endN-1]) {
 		cout << it << ' ';
