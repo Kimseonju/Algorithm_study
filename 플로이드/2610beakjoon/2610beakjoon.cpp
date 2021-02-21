@@ -1,11 +1,76 @@
 ﻿// 2610beakjoon.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
 //
-
+//체크 못품
 #include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+int map[101][101];
+int N, M;
+int max1[101];
+bool check[101];
+vector<int> minTime(101, 100000000), teamMaster(101, 0), answer;
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	cin >> N >> M;
+	int a, b;
+	vector<int> arr;
+	for (int i = 1; i <= N; ++i)
+	{
+		for (int j = 1; j <= M; ++j)
+		{
+			map[i][j] = (i == j ? 0 : 100000000);
+		}
+		check[i] = false;
+	}
+	for (int i = 0; i < M; ++i)
+	{
+		cin >> a >> b;
+		map[a][b] = 1;
+		map[b][a] = 1;
+	}
+	for (int k = 1; k <= N; k++)
+	{
+		for (int i = 1; i <= N; i++)
+		{
+			for (int j = 1; j <= N; j++)
+			{
+				if (map[i][k] + map[k][j] < map[i][j])
+					map[i][j] = map[i][k] + map[k][j];
+
+			}
+		}
+	}
+
+	for (int i = 1; i <= N; i++)
+	{
+		int groupNum = 100000000, MaxTime = -1;
+
+		for (int j = 1; j <= N; j++)
+		{
+			if (map[i][j] != 100000000)
+			{
+				if (groupNum == 100000000) groupNum = j; //입력안되있으면 입력
+				if (MaxTime < map[i][j]) MaxTime = map[i][j]; //최대값구하기
+			}
+		}
+		if (minTime[groupNum] > MaxTime)  //의사전달 시간의 최대값보다 최소값이 더 낮으면
+		{
+			minTime[groupNum] = MaxTime;
+			teamMaster[groupNum] = i;
+		}
+	}
+
+	for (int i = 1; i <= N; i++)
+		if (teamMaster[i])
+			answer.push_back(teamMaster[i]);
+
+	sort(answer.begin(), answer.end());
+	cout << answer.size() << "\n";
+	for (int i = 0; i < answer.size(); i++)
+		cout << answer[i] << "\n";
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
