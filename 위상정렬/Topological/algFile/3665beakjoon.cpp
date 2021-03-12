@@ -10,7 +10,7 @@ using namespace std;
 
 int num;
 int n;
-int t[500];
+int t[501];
 int m;
 int mat[501][501];
 int in[501];
@@ -99,9 +99,5 @@ int main()
 		}
 		else
 			cout << "IMPOSSIBLE" << endl;
-
-
 	}
-	
-
 }
