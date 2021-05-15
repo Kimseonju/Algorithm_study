@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include<string.h>
 using namespace std;
 struct XY {
 	XY(int iy, int ix)
@@ -37,7 +38,8 @@ bool mapcheck()
 void playcheck()
 {
 	queue<XY>q;
-	for (int i = 0; i < vplayPoint.size(); ++i)
+	int kkk = vplayPoint.size();
+	for (int i = 0; i < kkk; ++i)
 	{
 		q.push(vplayPoint[i]);
 		bVisit[vplayPoint[i].y][vplayPoint[i].x] = true;
@@ -82,7 +84,8 @@ void playpoint(int idx, int cnt)
 		return;
 		//실행
 	}
-	for (int i = idx; i < vPoint.size(); ++i)
+	int kkk = vPoint.size();
+	for (int i = idx; i < kkk; ++i)
 	{
 		if (bplaypoint[i] == true)
 			continue;
@@ -115,8 +118,6 @@ int main()
 		cout << "-1";
 	else
 		cout << ans;
-
-
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
