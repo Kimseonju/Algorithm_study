@@ -45,14 +45,13 @@ int main()
                 int NextTimer = vTicket[StartNode][i].first+NodeTimer;
 
                 //금액이 넘지않으면
-                if (M>NextCost)
+                if (M>=NextCost)
                 {
                     //시간이 더 적게들면
                     if (dist[NextNode][NextCost] > NextTimer)
                     {
                          dist[NextNode][NextCost] = NextTimer;
                         pq.push(make_pair(-dist[NextNode][NextCost], make_pair(-NextCost, NextNode)));
-                        dist[NextNode][NextCost] = NextTimer;
                     }
 
                 }

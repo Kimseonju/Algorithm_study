@@ -5,30 +5,30 @@
 #include <vector>
 #include <algorithm>
 #include <math.h>
+#include <string>
 using namespace std;
-int N, M;
-int P[1000];
-int dpm[1000];
+
+int count[100];
+vector<string> solution(vector<string> orders, vector<int> course) {
+	vector<string> answer;
+
+	for (int i = 0; i < orders.size(); ++i)
+	{
+		for (int k = 0; k < orders[i].size(); ++k)
+		{
+
+		}
+
+	}
+	return answer;
+}
+
+
 
 
 int main()
 {
-	cin >> N;
-	int k;
-	for (int i = 1; i < N+1; ++i)
-	{
-		cin >> P[i];
-	}
 
-	for (int i = 1; i <= N; ++i)
-	{
-		for (int j = 1; j <= i; ++j)
-		{
-			dpm[i] = max(dpm[i], dpm[i - j] + P[j]);
-		}
-	}
-
-	cout << dpm[N];
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴

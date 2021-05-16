@@ -7,36 +7,6 @@ int map[126][126];
 int d1[126][126];
 using namespace std;
 
-//void dp(int y, int x, int count)
-//{
-//	if (dp1[y][x] > count + map[y][x])
-//	{
-//		dp1[y][x] = count + map[y][x];
-//
-//		if (y + 1 < N)
-//		{
-//			dp(y + 1, x, dp1[y][x]);
-//		}
-//		if (y - 1 >= 0)
-//		{
-//			dp(y - 1, x, dp1[y][x]);
-//		}
-//		if (x + 1 < N)
-//		{
-//			dp(y, x + 1, dp1[y][x]);
-//		}
-//		if (x - 1 >= 0)
-//		{
-//			dp(y - 1, x, dp1[y][x]);
-//		}
-//	}
-//	else
-//	{
-//	
-//	}
-//	
-//}
-
 int dest[4][2] = { {0,1},{0,-1}, {-1,0}, {1,0} };
 int main()
 {
@@ -82,6 +52,6 @@ int main()
 		}
 		++a;
 		printf("Problem %d: %d\n", a, d1[N - 1][N - 1]);
-		//string 값변환 ㄴㄴ해;;
+		//string 값변환 ㄴㄴ
 	}
 }
