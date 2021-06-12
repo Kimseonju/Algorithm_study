@@ -22,17 +22,21 @@ int main()
 
 		while(!st.empty())
 		{
+			//내림차순으로 되어있고, 만약 작으면 이후사람은 못봄
+			//pop
 			if (member[i] > st.top().first)
 			{
 				ans+= st.top().second;
 				st.pop();
 			}
+			//같으면 중복 pop
 			else if (member[i] == st.top().first)
 			{
 				ans += st.top().second;
 				p.second += st.top().second;
 				st.pop();
 			}
+			//아니면 둘이 보는것
 			else
 			{
 				ans++;
