@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{2d147792-56c4-4864-9f25-621ae950afd1}</ProjectGuid>
-    <RootNamespace>My9935문자열폭발</RootNamespace>
+    <ProjectGuid>{4a9b1b53-9e5e-4125-8e12-b319b9ef3fa7}</ProjectGuid>
+    <RootNamespace>구조23015오아시스재결합</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>구조2_9935문자열폭발</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="9935문자열폭발.cpp" />
+    <ClCompile Include="구조2_3015오아시스재결합.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

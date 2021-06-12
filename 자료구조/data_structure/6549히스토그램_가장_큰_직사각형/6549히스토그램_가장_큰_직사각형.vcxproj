@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{2d147792-56c4-4864-9f25-621ae950afd1}</ProjectGuid>
-    <RootNamespace>My9935문자열폭발</RootNamespace>
+    <ProjectGuid>{693952fa-d589-44f9-950a-cdba1ab82265}</ProjectGuid>
+    <RootNamespace>My6549히스토그램가장큰직사각형</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>구조2_9935문자열폭발</ProjectName>
+    <ProjectName>구조2_6549히스토그램_가장_큰_직사각형</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,7 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="9935문자열폭발.cpp" />
+    <ClCompile Include="6549히스토그램_가장_큰_직사각형.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
