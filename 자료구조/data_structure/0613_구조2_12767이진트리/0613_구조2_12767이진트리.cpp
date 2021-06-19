@@ -84,6 +84,9 @@ public:
 	~Map()
 	{}
 };
+
+
+
 vector<Map*> a;
 int N, K;
 int _data;
