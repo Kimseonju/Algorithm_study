@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="11438Beakjoon.cpp">
+    <ClCompile Include="6549히스토그램_가장_큰_직사각형.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

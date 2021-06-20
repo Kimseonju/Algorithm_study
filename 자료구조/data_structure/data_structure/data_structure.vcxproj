@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{1fe71ee9-e1af-4d7b-ae0d-53b8c7774271}</ProjectGuid>
-    <RootNamespace>My11438Beakjoon</RootNamespace>
+    <ProjectGuid>{d6aca717-9b69-4e04-944d-1967f9d5ede2}</ProjectGuid>
+    <RootNamespace>datastructure</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="11438Beakjoon.cpp" />
+    <ClCompile Include="data_structure.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
