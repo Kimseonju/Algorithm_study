@@ -1,54 +1,55 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
-#include <algorithm>
+#include<algorithm>
 using namespace std;
 
 
 int N;
 int main()
 {
-
-
 	cin >> N;
-	vector<vector<long long>>v(N);
+
+	vector<long long> A(N);
+	vector<long long> B(N);
+	vector<long long> C(N);
+	vector<long long> D(N);
+
+	vector<long long> Arr1;
+	vector<long long> Arr2;
 
 	
 	for (int i = 0; i < N; ++i)
 	{
-		for (int k = 0; k < 4; ++k)
-		{
-			int num;
-			cin >> num;
-			v[i].push_back(num);
-		}
+		int a, b, c, d;
+		cin >> a >> b >> c >> d;
+
+		A[i] = a;
+		B[i] = b;
+		C[i] = c;
+		D[i] = d;
 	}
 
-
-	int m = N / 2;
-	N = N - m;
-	vector<long long>vN;
-	
-	int num = 0;
-	for (int i = 0; i < (2 << 2 * N); ++i)
+	for (int i = 0; i < N; ++i)
 	{
-		int sum = 0;
 		for (int j = 0; j < N; ++j)
 		{
-			int checkabcd =10^j;
-			checkabcd = num / checkabcd;
-			sum += v[j][checkabcd];
+			Arr1.push_back(A[i] + B[j]);
+			Arr2.push_back(C[i] + D[j]);
 		}
-		++num;
-		
-		vN.push_back(sum);
+	}
+	long long answer = 0;
+	sort(Arr1.begin(), Arr1.end());
+	sort(Arr2.begin(), Arr2.end());
+	int pre;
+		int end;
+	for (int i = 0; i < Arr1.size(); i++) {
+
+		pre = lower_bound(Arr2.begin(), Arr2.end(), -Arr1[i]) - Arr2.begin();
+		end = upper_bound(Arr2.begin(), Arr2.end(), -Arr1[i]) - Arr2.begin();
+
+		answer += (end - pre);
 	}
 
-
-	int ans = 0;
-	
-
-
-
+	cout << answer;
 
 }
-

@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ef47149b-14fa-48ee-926d-045c4e589e64}</ProjectGuid>
-    <RootNamespace>My7453합이0인네정수</RootNamespace>
+    <ProjectGuid>{a5789d36-66d2-4e79-adde-f86b2b4a83fc}</ProjectGuid>
+    <RootNamespace>My11003최소값찾기</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="7453합이0인네정수.cpp" />
+    <ClCompile Include="11003최소값찾기.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{ef47149b-14fa-48ee-926d-045c4e589e64}</ProjectGuid>
-    <RootNamespace>My7453합이0인네정수</RootNamespace>
+    <ProjectGuid>{ce9296e2-247a-419d-a29c-83551e446aa1}</ProjectGuid>
+    <RootNamespace>My2143두배열의합</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="7453합이0인네정수.cpp" />
+    <ClCompile Include="2143두배열의합.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
