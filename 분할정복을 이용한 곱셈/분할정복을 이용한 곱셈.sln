@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "분할정복을 이용한 곱셈", "분할정복을 이용한 곱셈\분할정복을 이용한 곱셈.vcxproj", "{0BE88764-9263-4389-BED7-080ECA720747}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1629곱셈", "1629곱셈\1629곱셈.vcxproj", "{A70BDD22-68AD-4640-9CE9-D385E7E713B5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "18291비요뜨의징검다리건너기", "18291비요뜨의징검다리건너기\18291비요뜨의징검다리건너기.vcxproj", "{56FD22A8-9B45-42AA-8E77-688E58A9687F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BE88764-9263-4389-BED7-080ECA720747}.Debug|x64.ActiveCfg = Debug|x64
+		{0BE88764-9263-4389-BED7-080ECA720747}.Debug|x64.Build.0 = Debug|x64
+		{0BE88764-9263-4389-BED7-080ECA720747}.Debug|x86.ActiveCfg = Debug|Win32
+		{0BE88764-9263-4389-BED7-080ECA720747}.Debug|x86.Build.0 = Debug|Win32
+		{0BE88764-9263-4389-BED7-080ECA720747}.Release|x64.ActiveCfg = Release|x64
+		{0BE88764-9263-4389-BED7-080ECA720747}.Release|x64.Build.0 = Release|x64
+		{0BE88764-9263-4389-BED7-080ECA720747}.Release|x86.ActiveCfg = Release|Win32
+		{0BE88764-9263-4389-BED7-080ECA720747}.Release|x86.Build.0 = Release|Win32
+		{A70BDD22-68AD-4640-9CE9-D385E7E713B5}.Debug|x64.ActiveCfg = Debug|x64
+		{A70BDD22-68AD-4640-9CE9-D385E7E713B5}.Debug|x64.Build.0 = Debug|x64
+		{A70BDD22-68AD-4640-9CE9-D385E7E713B5}.Debug|x86.ActiveCfg = Debug|Win32
+		{A70BDD22-68AD-4640-9CE9-D385E7E713B5}.Debug|x86.Build.0 = Debug|Win32
+		{A70BDD22-68AD-4640-9CE9-D385E7E713B5}.Release|x64.ActiveCfg = Release|x64
+		{A70BDD22-68AD-4640-9CE9-D385E7E713B5}.Release|x64.Build.0 = Release|x64
+		{A70BDD22-68AD-4640-9CE9-D385E7E713B5}.Release|x86.ActiveCfg = Release|Win32
+		{A70BDD22-68AD-4640-9CE9-D385E7E713B5}.Release|x86.Build.0 = Release|Win32
+		{56FD22A8-9B45-42AA-8E77-688E58A9687F}.Debug|x64.ActiveCfg = Debug|x64
+		{56FD22A8-9B45-42AA-8E77-688E58A9687F}.Debug|x64.Build.0 = Debug|x64
+		{56FD22A8-9B45-42AA-8E77-688E58A9687F}.Debug|x86.ActiveCfg = Debug|Win32
+		{56FD22A8-9B45-42AA-8E77-688E58A9687F}.Debug|x86.Build.0 = Debug|Win32
+		{56FD22A8-9B45-42AA-8E77-688E58A9687F}.Release|x64.ActiveCfg = Release|x64
+		{56FD22A8-9B45-42AA-8E77-688E58A9687F}.Release|x64.Build.0 = Release|x64
+		{56FD22A8-9B45-42AA-8E77-688E58A9687F}.Release|x86.ActiveCfg = Release|Win32
+		{56FD22A8-9B45-42AA-8E77-688E58A9687F}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9FB9CE9E-1A5E-4949-B9E1-853F545C8151}
+	EndGlobalSection
+EndGlobal
