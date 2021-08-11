@@ -9,7 +9,7 @@ vector<vector<pair<int, int>>> city;
 int n, m, k;
 
 //이걸 왜 300이라고 하면 왜 틀리는거지..?
-priority_queue<int> dist[20000];
+priority_queue<int> dist[10001];
 
 void dijstra()
 {
