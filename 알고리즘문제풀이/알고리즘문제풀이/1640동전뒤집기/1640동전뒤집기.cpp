@@ -10,58 +10,71 @@ int N, M;
 int ans = 2147483647;
 
 //x로 셀때
-bool x[1000];
+int Gr;
+int Br;
 //y로 셀때
-bool y[1000];
+int Gc;
+int Bc;
 int main()
 {
 	cin >> N >> M;
+
+	vector<string> a(N);
+	for (int i = 0; i < N; i++) {
+		cin >> a[i];
+	}
 	for (int i = 0; i < N; ++i)
 	{
-		string str;
-		cin >> str;
-
-		for (int j = 0; j < str.size(); ++j)
+		int cnt = 0;
+		for (int j = 0; j < M; ++j)
 		{
-			if (str[j]&1)
+			if (a[i][j]&1)
 			{
-				x[i] = !x[i];
-				y[j] = !x[j];
+				cnt++;
 			}
 		}
-	}
-
-	int countx=0, county = 0;
-	for (int i = 0; i < N; i++) 
-		countx += x[i] % 2;
-	for (int i = 0; i < M; i++) 
-		county += y[i] % 2;
-
-	int N1, M1;
-	N1 = N % 2;
-	M1 = M % 2;
-	int countx1 = countx % 2;
-	int county2 = county % 2;
-	if (N1 == 0 && M1 == 0)
-	{
-		if (countx1 == 1) {
-			cout << "-1";
-			return 0;
+		if (cnt%2==0)
+		{
+			Gr += 1;
+		}
+		else
+		{
+			Br += 1;
 		}
 	}
-	else if (N1 != 0 && M1 == 0)
-	{
 
-	}
-	else if (N1 == 0 && M1 != 0)
+	for (int i = 0; i < M; ++i)
 	{
-
+		int cnt = 0;
+		for (int j = 0; j < N; ++j)
+		{
+			if (a[i][j] & 1)
+			{
+				cnt++;
+			}
+		}
+		if (cnt % 2 == 0)
+		{
+			Gc += 1;
+		}
+		else
+		{
+			Bc += 1;
+		}
 	}
+	
+	int temp1 = Br;
+	if (Br % 2 == 0)
+		temp1 += Bc;
 	else
-	{
+		temp1 += Gc;
 
-	}
+	int temp2 = Gr;
+	if (Gr % 2 == 0)
+		temp2 += Bc;
+	else
+		temp2 += Gc;
 
-	int b = 0;
-
+	int ans = min(temp1, temp2);
+	cout << ans << '\n';
 }
