@@ -76,6 +76,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4358생태학", "4358생태
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "21939문제 추천 시스템 Version 1", "21939문제 추천 시스템 Version 1\21939문제 추천 시스템 Version 1.vcxproj", "{6C989851-F22A-4839-A44F-4BFE88842C46}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2696중앙값구하기", "2696중앙값구하기\2696중앙값구하기.vcxproj", "{414A2F1A-B70D-4E08-8FA6-413D15479927}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -356,6 +358,14 @@ Global
 		{6C989851-F22A-4839-A44F-4BFE88842C46}.Release|x64.Build.0 = Release|x64
 		{6C989851-F22A-4839-A44F-4BFE88842C46}.Release|x86.ActiveCfg = Release|Win32
 		{6C989851-F22A-4839-A44F-4BFE88842C46}.Release|x86.Build.0 = Release|Win32
+		{414A2F1A-B70D-4E08-8FA6-413D15479927}.Debug|x64.ActiveCfg = Debug|x64
+		{414A2F1A-B70D-4E08-8FA6-413D15479927}.Debug|x64.Build.0 = Debug|x64
+		{414A2F1A-B70D-4E08-8FA6-413D15479927}.Debug|x86.ActiveCfg = Debug|Win32
+		{414A2F1A-B70D-4E08-8FA6-413D15479927}.Debug|x86.Build.0 = Debug|Win32
+		{414A2F1A-B70D-4E08-8FA6-413D15479927}.Release|x64.ActiveCfg = Release|x64
+		{414A2F1A-B70D-4E08-8FA6-413D15479927}.Release|x64.Build.0 = Release|x64
+		{414A2F1A-B70D-4E08-8FA6-413D15479927}.Release|x86.ActiveCfg = Release|Win32
+		{414A2F1A-B70D-4E08-8FA6-413D15479927}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

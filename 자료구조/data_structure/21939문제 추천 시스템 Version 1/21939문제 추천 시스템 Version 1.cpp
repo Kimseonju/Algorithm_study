@@ -4,7 +4,9 @@
 #include <stack>
 #include <algorithm>
 #include <map>
+#include <queue>
 using namespace std;
+
 void oneoneoneone()
 {
 	ios::sync_with_stdio(false);
@@ -12,8 +14,8 @@ void oneoneoneone()
 	cout.tie(nullptr);
 }
 int N, M;
-map<int, int> problemmap;
-map<int, map<int, int>> level_map;
+priority_queue<pair<int, int>>minq , maxq;
+map<int, int> deletenum;
 int main()
 {
 	oneoneoneone();
@@ -22,17 +24,8 @@ int main()
 	{
 		int num, level;
 		cin >> num >> level;
-		problemmap.insert({ num,level });
-		if (level_map.find(level) == level_map.end())
-		{
-			map<int, int>mmap;
-			mmap.insert({ num,0 });
-			level_map.insert({ level, mmap });
-		}
-		else
-		{
-			level_map.find(level)->second.insert({ num,0 });
-		}
+		maxq.push(make_pair(level, num));
+		minq.push(make_pair(-level, -num));
 	}
 
 	cin >> M;
@@ -47,13 +40,50 @@ int main()
 			cin >> one;
 			if (one == 1)
 			{
-				auto iter = (--level_map.end())->second.end();
-				iter--;
-				cout << iter->first << '\n';
+				for (;;)
+				{
+
+					int level = maxq.top().first;
+					int num = maxq.top().second;
+					
+					auto finditer = deletenum.find(num);
+					if (finditer == deletenum.end())
+					{
+						cout << num << '\n';
+						break;
+					}
+					else
+					{
+						finditer->second++;
+						if (finditer->second == 2)
+							deletenum.erase(finditer);
+						maxq.pop();
+					}
+				}
+
+
 			}
 			else if (one == -1)
 			{
-				cout << level_map.begin()->second.begin()->first << '\n';
+				for (;;)
+				{
+
+					int level = -minq.top().first;
+					int num = -minq.top().second;
+					auto finditer = deletenum.find(num);
+					if (finditer == deletenum.end())
+					{
+						cout << num << '\n';
+						break;
+					}
+					else
+					{
+						finditer->second++;
+						if (finditer->second == 2)
+							deletenum.erase(finditer);
+						minq.pop();
+					}
+				}
 			}
 		}
 		else if (str == "solved")
@@ -61,21 +91,8 @@ int main()
 
 			int num;
 			cin >> num;
-			auto iter = problemmap.find(num);
+			deletenum.insert({ num,0 });
 
-			auto& veciter = level_map.find(iter->second)->second;
-			auto veciterbegin = veciter.begin();
-			auto veciterend = veciter.end();
-			for (; veciterbegin != veciterend; veciterbegin++)
-			{
-				if (veciterbegin->first == num) {
-					veciter.erase(veciterbegin);
-					break;
-				}
-			}
-			if (veciter.empty())
-				level_map.erase(level_map.find(iter->second));
-			problemmap.erase(problemmap.find(num));
 
 
 		}
@@ -83,17 +100,8 @@ int main()
 		{
 			int num, level;
 			cin >> num >> level;
-			problemmap.insert({ num,level });
-			if (level_map.find(level) == level_map.end())
-			{
-				map<int, int>mmap;
-				mmap.insert({ num,0 });
-				level_map.insert({ level, mmap });
-			}
-			else
-			{
-				level_map.find(level)->second.insert({ num,0 });
-			}
+			minq.push(make_pair(-level, -num));
+			maxq.push(make_pair(level, num));
 		}
 	}
 }
