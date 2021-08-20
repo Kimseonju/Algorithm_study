@@ -1,4 +1,4 @@
-﻿
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -12,10 +12,7 @@ void oneoneoneone()
 	cin.tie(nullptr);
 	cout.tie(nullptr);
 }
-
 int main()
 {
-	oneoneoneone();
-
-
+    std::cout << "Hello World!\n";
 }
