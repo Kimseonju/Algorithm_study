@@ -9,7 +9,7 @@ int N, M;
 int dx[3] = { 0,-1,1 };
 int dy[3] = { 1,0,0 };
 
-int dp(int x, int y, int dir)
+int dfs(int x, int y, int dir)
 {
     if (y == N - 1 && x == M - 1)
         return map[N - 1][M - 1];
@@ -29,7 +29,7 @@ int dp(int x, int y, int dir)
             continue;
 
         check[nexty][nextx] = true;
-        ref=max(ref, dp(nextx, nexty, i)+ map[y][x]);
+        ref = max(ref, dfs(nextx, nexty, i) + map[y][x]);
         check[nexty][nextx] = false;
     }
     return ref;
@@ -43,13 +43,12 @@ int main()
         for (int j = 0; j < M; ++j)
         {
             cin >> map[i][j];
-            for(int k=0; k<3; ++k)
-            dist[i][j][k] = -1000000;
+            for (int k = 0; k < 3; ++k)
+                dist[i][j][k] = -1000000;
         }
     }
     check[0][0] = true;
-    int bbb=dp(0, 0, 1);
+    int bbb = dfs(0, 0, 1);
     cout << bbb;
 
 }
-
