@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="programmers.co.kr_learn_courses_30_lessons_12971.cpp">
+    <ClCompile Include="programmers가장먼노드.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
